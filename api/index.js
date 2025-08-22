@@ -25,4 +25,22 @@ app.get('/', async (req, res) => {
 });
 
 
+app.get('/about', async (req, res) => {
+  res.render('about', {
+    title: 'About',
+    style: '<link rel="stylesheet" href="/css/style.css">',
+    script: '<script src="/js/script.js"></script>'
+  });
+});
+
+
+app.get('/contact', async (req, res) => {
+  res.render('contact', {
+    title: 'Contact',
+    style: '<link rel="stylesheet" href="/css/style.css">',
+    script: '<script src="/js/script.js"></script>'
+  });
+});
+
+
 module.exports = app;
